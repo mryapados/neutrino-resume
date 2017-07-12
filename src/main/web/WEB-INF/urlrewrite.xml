@@ -1,0 +1,79 @@
+<urlrewrite>
+
+    <rule>
+       <from>^/admin/$</from>
+       <to>/admin/index</to>
+    </rule>
+
+    <rule>
+       <from>^/index.html$</from>
+       <to>/</to>
+    </rule>
+    
+    <rule>
+       <from>^/admin/(.*)$</from>
+       <to>/@bo/$1</to>
+    </rule>
+    
+    
+    <rule><!-- Category : lang, name -->
+       <from>^/([A-Za-z]{2})/([a-zA-Z0-9_\-]+).html$</from>
+       <to>/category/category?name=$2&amp;language=$1</to>
+    </rule>
+
+    <rule>
+       <from>^/([a-zA-Z0-9_\-]+).html$</from>
+       <to>/category/category?name=$1</to>
+    </rule>
+
+    
+    
+    <rule><!-- lang, keyword, type, name -->
+       <from>^/([A-Za-z]{2})/([a-zA-Z0-9_\-]+)/([a-zA-Z0-9_\-]+)/([a-zA-Z0-9_\-]+).html$</from>
+       <to>/$3/$3?name=$4&amp;keywords=$2&amp;language=$1</to>
+    </rule>
+    <rule><!-- lang, type, name -->
+       <from>^/([A-Za-z]{2})/([a-zA-Z0-9_\-]+)/([a-zA-Z0-9_\-]+).html$</from>
+       <to>/$2/$2?name=$3&amp;language=$1</to>
+    </rule>
+    
+    <rule><!-- keyword, type, name -->
+       <from>^/([a-zA-Z0-9_\-]+)/([a-zA-Z0-9_\-]+)/([a-zA-Z0-9_\-]+).html$</from>
+       <to>/$2/$2?name=$3&amp;keywords=$1</to>
+    </rule>
+    <rule><!-- type, name -->
+       <from>^/([a-zA-Z0-9_\-]+)/([a-zA-Z0-9_\-]+).html$</from>
+       <to>/$1/$1?name=$2</to>
+    </rule>
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+	
+
+
+    <rule>
+       <from>^/demo/api.do?method=getUser&amp;uid=(.*)$</from>
+       <to>/demo/api/user/$1</to>
+    </rule>
+</urlrewrite>
+
+
