@@ -10,11 +10,6 @@
        <to>/</to>
     </rule>
     
-    <rule>
-       <from>^/admin/(.*)$</from>
-       <to>/@bo/$1</to>
-    </rule>
-    
     
     <rule><!-- Category : lang, name -->
        <from>^/([A-Za-z]{2})/([a-zA-Z0-9_\-]+).html$</from>
