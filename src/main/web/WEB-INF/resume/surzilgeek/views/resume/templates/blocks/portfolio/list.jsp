@@ -15,7 +15,7 @@
 					        <div class="icons">
 					            <i class="fa fa-picture-o" aria-hidden="true"></i>
 					        </div>                                  
-					        <h3><s:message code="portfolio.title" text="Portfolio"/></h3>
+					        <h3><s:message htmlEscape="false" code="portfolio.title" text="Portfolio"/></h3>
 					    </div> 
 					    <div class="sub-content">
 					        <ul>

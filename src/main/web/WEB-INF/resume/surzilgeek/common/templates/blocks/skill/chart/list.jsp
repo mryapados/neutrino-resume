@@ -8,8 +8,8 @@
 <my:cache>
 	<div class="language-skill">
 		<div class="text-info">
-			<h4><s:message code="skills.chart.info.title" text="Language Skill" /></h4>
-		    <p><s:message code="skills.chart.info.description" text="" /></p>
+			<h4><s:message htmlEscape="false" code="skills.chart.info.title" text="Language Skill" /></h4>
+		    <p><s:message htmlEscape="false" code="skills.chart.info.description" text="" /></p>
 		</div>
 		<c:choose>
 			<c:when test="${not empty activeResume}">

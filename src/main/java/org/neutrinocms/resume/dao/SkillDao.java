@@ -14,7 +14,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface SkillDao extends TranslationDao<Skill> {
 
-	@Query("SELECT s FROM Skill s WHERE (s.folders IS EMPTY OR :folder IN elements(s.folders)) AND s.lang =:lang AND s.kind =:kind ORDER BY s.ordered")
+	@Query("SELECT s FROM Skill s WHERE (s.folders IS EMPTY OR :folder IN elements(s.folders)) AND s.lang =:lang AND s.kind =:kind AND (s.active = 1) ORDER BY s.ordered")
 	List<Skill> findAllKindForFolderAndLang(@Param("kind") SkillKind kind, @Param("folder") Folder folder, @Param("lang") Lang lang);
 	
 	

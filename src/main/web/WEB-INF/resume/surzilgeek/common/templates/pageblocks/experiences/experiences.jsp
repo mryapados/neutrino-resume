@@ -10,7 +10,7 @@
 		<div class="row">
 			<div class="col-sm-8">
 				<header class="section-title">
-					<h2><s:message code="experience.title" text="My Exprience" /></h2>
+					<h2><s:message htmlEscape="false" code="experience.title" text="My Exprience" /></h2>
 				</header>
 				<article>
 					<div class="text-info">${activePage.description}</div>

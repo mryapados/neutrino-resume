@@ -18,8 +18,8 @@
 	                <h3>Work History</h3>
 	            </div>
 	            <div class="sub-content">
-		            <s:message var="pattern" code="date.locale.experience.format " text="MMMM, yyyy"/>
-					<s:message var="present" code="experience.present " text="Present"/>
+		            <s:message htmlEscape="false" var="pattern" code="date.locale.experience.format " text="MMMM, yyyy"/>
+					<s:message htmlEscape="false" var="present" code="experience.present " text="Present"/>
 					<c:forEach items="${experiences}" var="experience" varStatus="status">
 						<my:bind var="experienceTitle" type="Experience" beanId="${experience.id}" field="title" />
 						<my:bind var="experienceCompanyName" type="Experience" beanId="${experience.id}" field="companyName" />

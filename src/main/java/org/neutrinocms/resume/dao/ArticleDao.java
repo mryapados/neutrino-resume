@@ -13,7 +13,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ArticleDao extends TranslationDao<Article> {
 
-	@Query("SELECT e FROM Article e WHERE (e.folders IS EMPTY OR :folder IN elements(e.folders)) AND e.lang =:lang ORDER BY e.ordered DESC")
+	@Query("SELECT e FROM Article e WHERE (e.folders IS EMPTY OR :folder IN elements(e.folders)) AND e.lang =:lang AND (e.active = 1) ORDER BY e.ordered DESC")
 	Page<Article> findAllForFolderAndLang(@Param("folder") Folder folder, @Param("lang") Lang lang, Pageable pageable);
 	
 }

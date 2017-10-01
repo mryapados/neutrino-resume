@@ -48,7 +48,7 @@
                     </div> 
                 </div>
 
-                <nav role="navigation" aria-label="<s:message code='menu.main' text='Main menu' />" id="mainmenu" class="collapse navbar-collapse">
+                <nav role="navigation" aria-label="<s:message htmlEscape="false" code='menu.main' text='Main menu' />" id="mainmenu" class="collapse navbar-collapse">
                 	<ul class="nav navbar-nav">
                 		<my:block position="resume_nav" /> 
                 	</ul>

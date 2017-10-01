@@ -13,7 +13,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CategoryDao extends TranslationDao<Category> {
 
-	@Query("SELECT c FROM Category c WHERE (c.folders IS EMPTY OR :folder IN elements(c.folders)) AND c.lang =:lang AND c.inMenu = true ORDER BY c.ordered")
+	@Query("SELECT c FROM Category c WHERE (c.folders IS EMPTY OR :folder IN elements(c.folders)) AND c.lang =:lang AND c.inMenu = true AND (c.active = 1) ORDER BY c.ordered")
 	List<Category> findAllForFolderAndLang(@Param("folder") Folder folder, @Param("lang") Lang lang);
 	
 }

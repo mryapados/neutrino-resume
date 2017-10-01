@@ -7,8 +7,8 @@
 
 
 
-<s:message var="pattern" code="date.locale.portfolio.format" text="MMMM, yyyy"/>
-<s:message var="present" code="portfolio.present " text="Present"/>
+<s:message htmlEscape="false" var="pattern" code="date.locale.portfolio.format" text="MMMM, yyyy"/>
+<s:message htmlEscape="false" var="present" code="portfolio.present " text="Present"/>
 
 <my:cache>
 	<div class="portfolio-content">

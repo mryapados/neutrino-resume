@@ -9,7 +9,7 @@
 		<my:bind var="resumeFirstName" type="Resume" beanId="${activeResume.id}" field="firstName" scope="request" />
 		<my:bind var="resumeLastName" type="Resume" beanId="${activeResume.id}" field="lastName" scope="request" />
 		<my:bind var="resumeFunction" type="Resume" beanId="${activeResume.id}" field="function" scope="request" />
-		<my:bind var="resumeDescription" type="Resume" beanId="${activeResume.id}" field="description" scope="request" />
+		<my:bind var="resumeDescription" type="Resume" beanId="${activeResume.id}" field="description" scope="request" escapeXml="false" />
 		<my:bind var="resumeEmail" type="Resume" beanId="${activeResume.id}" field="email" scope="request" />
 		<my:bind var="resumePhone" type="Resume" beanId="${activeResume.id}" field="phone" scope="request" />
 		<my:bind var="resumeDateOfBirth" type="Resume" beanId="${activeResume.id}" field="dateOfBirth" scope="request" />

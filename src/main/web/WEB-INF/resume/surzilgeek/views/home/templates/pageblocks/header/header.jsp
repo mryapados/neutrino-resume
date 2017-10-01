@@ -12,7 +12,7 @@
 				<div class="banner-content" style="background-image:url(${resumeBannerUrl});">
 					<div class="banner-info">
 						<h1>
-							<span class="title"><s:message code="resume.hello" text="Hello, I am " /></span>
+							<span class="title"><s:message htmlEscape="false" code="resume.hello" text="Hello, I am " /></span>
 							<span class="name">${resumeFirstName} ${resumeLastName}</span>
 							<span class="function">${resumeFunction}</span>
 						</h1>

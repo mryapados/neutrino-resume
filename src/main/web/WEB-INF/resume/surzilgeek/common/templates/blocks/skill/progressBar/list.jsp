@@ -8,8 +8,8 @@
 
 <my:cache>
 	<div class="text-info">
-	    <h4><s:message code="skills.progressbar.info.title" text="Experience Skill" /></h4>
-	    <p><s:message code="skills.progressbar.info.description" text="" /></p>
+	    <h4><s:message htmlEscape="false" code="skills.progressbar.info.title" text="Experience Skill" /></h4>
+	    <p><s:message htmlEscape="false" code="skills.progressbar.info.description" text="" /></p>
 	</div>
 	<c:choose>
 		<c:when test="${not empty activeResume}">

@@ -32,6 +32,10 @@ public class Simple implements IdProvider, Serializable{
 	@Access(AccessType.PROPERTY)
 	private Integer id;
 	
+	@BOField(type = ValueType.BOOLEAN)
+	@Column(name = "active")
+	private boolean active;
+	
 	@BOField(type = ValueType.VARCHAR50, defaultField = true, sortBy = SortType.ASC, sortPriority = 200)
 	@NotNull
 	@SafeHtml(whitelistType = WhiteListType.SIMPLE_TEXT)
@@ -50,9 +54,19 @@ public class Simple implements IdProvider, Serializable{
 	public void setId(Integer id) {
 		this.id = id;
 	}
+	@Override
+	public boolean isActive() {
+		return active;
+	}
+	@Override
+	public void setActive(boolean active) {
+		this.active = active;
+	}
+	@Override
 	public String getName() {
 		return name;
 	}
+	@Override
 	public void setName(String name) {
 		this.name = name;
 	}

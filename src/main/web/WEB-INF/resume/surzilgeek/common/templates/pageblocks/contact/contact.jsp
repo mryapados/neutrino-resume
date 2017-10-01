@@ -11,7 +11,7 @@
             <div class="col-sm-8">
                 <div class="section-content">
                     <header class="section-title">
-                        <h2><s:message code="contact.title" text="Contact Me" /></h2>
+                        <h2><s:message htmlEscape="false" code="contact.title" text="Contact Me" /></h2>
                     </header>
                     <article>
 						<div class="text-info"><c:out value="${activePage.description}" escapeXml="false" /></div>

@@ -13,7 +13,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface EducationDao extends TranslationDao<Education> {
 
-	@Query("SELECT e FROM Education e WHERE (e.folders IS EMPTY OR :folder IN elements(e.folders)) AND e.lang =:lang ORDER BY e.year DESC")
+	@Query("SELECT e FROM Education e WHERE (e.folders IS EMPTY OR :folder IN elements(e.folders)) AND e.lang =:lang AND (e.active = 1) ORDER BY e.year DESC")
 	List<Education> findAllForFolderAndLang(@Param("folder") Folder folder, @Param("lang") Lang lang);
 
 }

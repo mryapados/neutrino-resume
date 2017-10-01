@@ -6,8 +6,8 @@
 
 <my:init test="${!initialized}"/>
             
-<s:message var="pattern" code="date.locale.experience.format " text="MMMM, yyyy"/>
-<s:message var="present" code="experience.present " text="Present"/>
+<s:message htmlEscape="false" var="pattern" code="date.locale.experience.format " text="MMMM, yyyy"/>
+<s:message htmlEscape="false" var="present" code="experience.present " text="Present"/>
 <my:cache>
 	<c:choose>
 		<c:when test="${not empty experiences}">

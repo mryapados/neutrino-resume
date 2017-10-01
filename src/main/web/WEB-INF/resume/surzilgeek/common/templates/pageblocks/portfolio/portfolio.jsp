@@ -12,7 +12,7 @@
             <div class="col-sm-8">
                 <div class="section-content">
                     <header class="section-title">
-                        <h2><s:message code="portfolio.title" text="Portfolio" /></h2>
+                        <h2><s:message htmlEscape="false" code="portfolio.title" text="Portfolio" /></h2>
                     </header>
                     <article>
 						<div class="text-info">${activePage.description}</div>

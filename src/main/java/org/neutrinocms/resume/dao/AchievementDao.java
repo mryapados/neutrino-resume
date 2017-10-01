@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface AchievementDao extends TranslationDao<Achievement> {
-	@Query("SELECT e FROM Achievement e WHERE (e.folders IS EMPTY OR :folder IN elements(e.folders)) AND e.lang =:lang ORDER BY e.ordered DESC")
+	@Query("SELECT e FROM Achievement e WHERE (e.folders IS EMPTY OR :folder IN elements(e.folders)) AND e.lang =:lang AND (e.active = 1) ORDER BY e.ordered DESC")
 	List<Achievement> findAllForFolderAndLang(@Param("folder") Folder folder, @Param("lang") Lang lang);
 
 }
